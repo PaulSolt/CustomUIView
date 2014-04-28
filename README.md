@@ -15,16 +15,38 @@ Custom UIView's
 ![LabelMadness](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/LabelMadness.png)
 
 
+
 Setup Steps in Xcode 5
 ----
+
 1. Create a new Objective-C class and subclass PSCustomViewFromXib
 
-    \#import "PSCustomViewFromXib"
-    @interface LabelMadness : PSCustomViewFromXib
 
+        #import "PSCustomViewFromXib"
+        @interface LabelMadness : PSCustomViewFromXib
+        
 2. Create a new iPhone View Interface File (i.e. LabelMadness.xib)
 3. Set the File's Owner to your custom class. (i.e. LabelMadness on Identity Inspector)
-4. Add a empty UIView to the Storyboard or your custom .xib for a UIViewController class
-5. Set the Custom Class for the UIView to your classname. (i.e. LabelMadness)
+
+Embedded UIView Using Views
+----
+
+1. Add a empty UIView to the Storyboard or your custom .xib for a UIViewController class
+2. Set the Custom Class for the UIView to your classname. (i.e. LabelMadness)
 
 ![Set File's Owner for the Custom UIView in the Interface Builder](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/UIView%20xib%20Setup.png)
+
+Programmatically Loaded UIView 
+------
+
+        @implementation ViewController
+        
+        - (void)viewDidLoad {
+            [super viewDidLoad];
+            
+            LabelMadness *labelMadness = [[LabelMadness alloc] init];
+            labelMadness.center = CGPointMake(60 + 100, 370 + 50);
+            labelMadness.backgroundColor = [UIColor greenColor];
+            [self.view addSubview:labelMadness];
+        }
+        @end
