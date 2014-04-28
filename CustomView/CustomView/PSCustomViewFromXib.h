@@ -1,5 +1,5 @@
 //
-//  SubClassView.h
+//  PSCustomViewFromXib.h
 //  CustomView
 //
 //  Created by Paul Solt on 4/28/14.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PSCustomViewFromXib.h"
 
-@interface SubClassView : PSCustomViewFromXib
+@interface PSCustomViewFromXib : UIView
+
+@property (nonatomic, strong) PSCustomViewFromXib *customView;
 
 @end

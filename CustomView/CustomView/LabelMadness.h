@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Paul Solt. All rights reserved.
 //
 
-#import "CustomViewFromXib.h"
+#import "PSCustomViewFromXib.h"
 
-@interface LabelMadness : CustomViewFromXib
+@interface LabelMadness : PSCustomViewFromXib
 
 @end

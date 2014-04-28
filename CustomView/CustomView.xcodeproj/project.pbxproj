@@ -21,7 +21,7 @@
 		BD0187F4190EB06900ADC8A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0187D6190EB06900ADC8A9 /* UIKit.framework */; };
 		BD0187FC190EB06900ADC8A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD0187FA190EB06900ADC8A9 /* InfoPlist.strings */; };
 		BD0187FE190EB06900ADC8A9 /* CustomViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0187FD190EB06900ADC8A9 /* CustomViewTests.m */; };
-		BD018809190EB07600ADC8A9 /* CustomViewFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = BD018808190EB07600ADC8A9 /* CustomViewFromXib.m */; };
+		BD018809190EB07600ADC8A9 /* PSCustomViewFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = BD018808190EB07600ADC8A9 /* PSCustomViewFromXib.m */; };
 		BD01880B190EB07F00ADC8A9 /* SubClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD01880A190EB07F00ADC8A9 /* SubClassView.xib */; };
 		BD01880E190EB0B100ADC8A9 /* SubClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD01880D190EB0B100ADC8A9 /* SubClassView.m */; };
 		BD018811190EBE3B00ADC8A9 /* LabelMadness.m in Sources */ = {isa = PBXBuildFile; fileRef = BD018810190EBE3B00ADC8A9 /* LabelMadness.m */; };
@@ -59,8 +59,8 @@
 		BD0187F9190EB06900ADC8A9 /* CustomViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomViewTests-Info.plist"; sourceTree = "<group>"; };
 		BD0187FB190EB06900ADC8A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD0187FD190EB06900ADC8A9 /* CustomViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewTests.m; sourceTree = "<group>"; };
-		BD018807190EB07600ADC8A9 /* CustomViewFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewFromXib.h; sourceTree = "<group>"; };
-		BD018808190EB07600ADC8A9 /* CustomViewFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewFromXib.m; sourceTree = "<group>"; };
+		BD018807190EB07600ADC8A9 /* PSCustomViewFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCustomViewFromXib.h; sourceTree = "<group>"; };
+		BD018808190EB07600ADC8A9 /* PSCustomViewFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCustomViewFromXib.m; sourceTree = "<group>"; };
 		BD01880A190EB07F00ADC8A9 /* SubClassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubClassView.xib; sourceTree = "<group>"; };
 		BD01880C190EB0B100ADC8A9 /* SubClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubClassView.h; sourceTree = "<group>"; };
 		BD01880D190EB0B100ADC8A9 /* SubClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClassView.m; sourceTree = "<group>"; };
@@ -127,13 +127,12 @@
 		BD0187D8190EB06900ADC8A9 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				BD2C8672190ECCBC00C4BBCD /* Reuse this Code File for Xib Loading */,
 				BD0187E1190EB06900ADC8A9 /* AppDelegate.h */,
 				BD0187E2190EB06900ADC8A9 /* AppDelegate.m */,
 				BD0187E4190EB06900ADC8A9 /* Main.storyboard */,
 				BD0187E7190EB06900ADC8A9 /* ViewController.h */,
 				BD0187E8190EB06900ADC8A9 /* ViewController.m */,
-				BD018807190EB07600ADC8A9 /* CustomViewFromXib.h */,
-				BD018808190EB07600ADC8A9 /* CustomViewFromXib.m */,
 				BD01880F190EBE3B00ADC8A9 /* LabelMadness.h */,
 				BD018810190EBE3B00ADC8A9 /* LabelMadness.m */,
 				BD018812190EBE7900ADC8A9 /* LabelMadness.xib */,
@@ -174,6 +173,15 @@
 				BD0187FA190EB06900ADC8A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD2C8672190ECCBC00C4BBCD /* Reuse this Code File for Xib Loading */ = {
+			isa = PBXGroup;
+			children = (
+				BD018807190EB07600ADC8A9 /* PSCustomViewFromXib.h */,
+				BD018808190EB07600ADC8A9 /* PSCustomViewFromXib.m */,
+			);
+			name = "Reuse this Code File for Xib Loading";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +287,7 @@
 				BD018811190EBE3B00ADC8A9 /* LabelMadness.m in Sources */,
 				BD01880E190EB0B100ADC8A9 /* SubClassView.m in Sources */,
 				BD0187E9190EB06900ADC8A9 /* ViewController.m in Sources */,
-				BD018809190EB07600ADC8A9 /* CustomViewFromXib.m in Sources */,
+				BD018809190EB07600ADC8A9 /* PSCustomViewFromXib.m in Sources */,
 				BD0187E3190EB06900ADC8A9 /* AppDelegate.m in Sources */,
 				BD0187DF190EB06900ADC8A9 /* main.m in Sources */,
 			);
@@ -486,6 +494,7 @@
 				BD018803190EB06900ADC8A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD018804190EB06900ADC8A9 /* Build configuration list for PBXNativeTarget "CustomViewTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				BD018806190EB06900ADC8A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
