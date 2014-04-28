@@ -17,7 +17,7 @@ Custom UIView's
 
 Setup Steps in Xcode 5
 ----
-1. Create a new Objective-C class and subclass **PSCustomViewFromXib** 
+1. Create a new Objective-C class and subclass *PSCustomViewFromXib* 
     #import "PSCustomViewFromXib"
     @interface LabelMadness : PSCustomViewFromXib
 
