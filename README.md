@@ -9,14 +9,14 @@ I created a class called PSCustomViewFromXib that can be subclassed and will aut
 
 ![Loaded UIViews for iPhone](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/Custom%20UIView%20on%20iPhone.png)
 
-Custom UIView's
+Custom UIView Layouts from Xcode's Interface Builder
 ----
 ![SubclassView](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/SubclassView.png)
 ![LabelMadness](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/LabelMadness.png)
 
 
 
-Setup Steps in Xcode 5
+Setup UIView Loading in Xcode 5
 ----
 
 1. Create a new Objective-C class and subclass PSCustomViewFromXib
@@ -28,7 +28,7 @@ Setup Steps in Xcode 5
 2. Create a new iPhone View Interface File (i.e. LabelMadness.xib)
 3. Set the File's Owner to your custom class. (i.e. LabelMadness on Identity Inspector)
 
-Embedded UIView Using Views
+Embedded UIView in View (i.e. in your Main.storyboard)
 ----
 
 1. Add a empty UIView to the Storyboard or your custom .xib for a UIViewController class
@@ -38,6 +38,7 @@ Embedded UIView Using Views
 
 Programmatically Loaded UIView 
 ------
+Use the code below to create and add a custom view to some position in your app.
 
         @implementation ViewController
         
