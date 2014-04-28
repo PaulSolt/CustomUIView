@@ -1,9 +1,12 @@
-CustomUIView
+Load a Custom UIView from .xib File
 ============
 
-Subclass the CustomView to load your custom UIView designs from .xib files programmatically or by embedding into another interface file. There isn't an easy solution that works without writing code (Unlike UIViewController .xib files).
+Unlike a UIViewController, you can't load custom UIView's from .xib files without writing code. I created the **PSCustomViewFromXib** class to do the loading and setup for you. It lets you load the UIView subclass programmatically or by embedding your UIView subclass into another interface file. 
 
-I created a class called PSCustomViewFromXib that can be subclassed and will automatically load the .xib file for a UIView, if they have the same name. 
+Note: Your subclass and .xib file must have the same name. (i.e. LabelMadness.h and LabelMadness.xib) 
+
+From Interface Builder to iPhone App
+----
 
 ![Storyboard with embedded UIViews](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/Storyboard.png)
 
@@ -28,15 +31,15 @@ Setup UIView Loading in Xcode 5
 2. Create a new iPhone View Interface File (i.e. LabelMadness.xib)
 3. Set the File's Owner to your custom class. (i.e. LabelMadness on Identity Inspector)
 
-Embedded UIView in View (i.e. in your Main.storyboard)
+Embedded UIView in View (Option A)
 ----
 
-1. Add a empty UIView to the Storyboard or your custom .xib for a UIViewController class
-2. Set the Custom Class for the UIView to your classname. (i.e. LabelMadness)
+1. Add a empty UIView to the Storyboard or ViewController.xib file
+2. Set the view's "File's Owner" to a "Custom Class" (i.e. LabelMadness)
 
 ![Set File's Owner for the Custom UIView in the Interface Builder](https://raw.githubusercontent.com/PaulSolt/CustomUIView/master/CustomView/UIView%20xib%20Setup.png)
 
-Programmatically Loaded UIView 
+Programmatically Loaded UIView (Option B)
 ------
 Use the code below to create and add a custom view to some position in your app.
 
